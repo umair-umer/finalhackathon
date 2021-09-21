@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body onload="getOrders('accepted')">
+    <nav class="navbar navbar-light shadow-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand">
+                <img width="100" src="../images/logo.jpg" alt="">
+            </a>
+            <div class="mybuttons">
+
+                <a href="../index.html"><button>
+                        LOGOUT
+                    </button></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-3 side-menu">
+                <ul class="menu-items">
+                    <a href="dashboard.html">
+                        <li>Dashboard</li>
+                    </a>
+                    <a href="addItems.html">
+                        <li>Add Items</li>
+                    </a>
+                    <a href="pending.html">
+                        <li>Pending Orders</li>
+                    </a>
+                    <a href="accepted.html">
+                        <li class="active-item">Accepted Orders</li>
+                    </a>
+                    <a href="delivered.html">
+                        <li>Delivered Orders</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="col-9">
+                <div class="mt-20">
+                    <div class="dishes-head">
+                        <h2>Accepted Orders</h2>
+                    </div>
+                    <div class="mt-20">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="order-list">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-storage.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+         
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <script src="../js/restaurant.js"></script>
+</body>
+
+</html>

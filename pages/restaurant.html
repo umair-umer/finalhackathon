@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body onload="getRestaurants()">
+
+    <nav class="navbar navbar-light shadow-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand">
+                <img width="100" src="../images/logo.jpg" alt="">
+            </a>
+            <div class="mybuttons">
+
+                <a href="javascript:void(0)"><button onclick="logout()">
+                        LOGOUT
+                    </button></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row justify-content-center mt-20">
+            <div class="col">
+               <h1>Resturants</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-20">
+            <div class="col">
+                <div id="resList" class="retaurants-list">
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyB50u7E8IBmeHlLoWVPe9oKo09TxiTNnuU",
+            authDomain: "portfolio-3cbe5.firebaseapp.com",
+            databaseURL: "https://portfolio-3cbe5.firebaseio.com",
+            projectId: "portfolio-3cbe5",
+            storageBucket: "portfolio-3cbe5.appspot.com",
+            messagingSenderId: "832073172829",
+            appId: "1:832073172829:web:708e126526b289385ccab4"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="../js/user.js"></script>
+</body>
+
+</html>
